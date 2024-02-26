@@ -1,0 +1,21 @@
+-- copy this to combine several excels into one, then upload to sql
+Sub CombineExcelFiles()
+
+Dim Folder As String
+Dim File As String
+Dim Sht As Worksheet
+
+    Application.ScreenUpdating = False
+    Folder = "C:\Users\mary.xu\Desktop\MW pricing\ac_dc_converters_external_internal_off_board\excel/"
+    File = Dir(Folder & "*.xls*")
+
+    Do While File <> ""
+     Workbooks.Open Filename:=Folder & File, ReadOnly:=True
+     For Each Sht In ActiveWorkbook.Sheets
+     Sht.Copy After:=ThisWorkbook.Sheets(1)
+     Next Sht
+      Workbooks(File).Close
+     File = Dir()
+    Loop
+
+End Sub
