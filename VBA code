@@ -6,6 +6,7 @@ Dim File As String
 Dim Sht As Worksheet
 
     Application.ScreenUpdating = False
+-- folder path could be different
     Folder = "C:\Users\mary.xu\Desktop\MW pricing\ac_dc_converters_external_internal_off_board\excel/"
     File = Dir(Folder & "*.xls*")
 
@@ -19,3 +20,5 @@ Dim Sht As Worksheet
     Loop
 
 End Sub
+
+-- code can be found https://www.youtube.com/watch?v=xUmNIxpIOV8&t=23s&ab_channel=DataNewbies
