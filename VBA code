@@ -20,5 +20,3 @@ Dim Sht As Worksheet
     Loop
 
 End Sub
-
--- code can be found https://www.youtube.com/watch?v=xUmNIxpIOV8&t=23s&ab_channel=DataNewbies
